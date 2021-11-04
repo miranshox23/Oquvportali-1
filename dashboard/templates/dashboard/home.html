@@ -1,0 +1,128 @@
+{% extends 'dashboard/base.html' %} 
+{% load static %} 
+{% block content %}
+
+<section class="container text-center" style="padding-bottom:2rem;">
+  <h3>Xush kelibsiz</h3>
+
+  <hr> <br>
+  <div class="row">
+    <div class="col-md-3">
+      <a href="{% url 'notes' %}">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/notes.jpg' %}" alt="Notes image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              Eslatmalar
+            </h5>
+            Keyinchalik ularga murojaat qilish uchun eslatmalar yarating. Ular o'chirilgunga qadar doimiy ravishda saqlanadi.
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-3">
+      <a href="{% url 'homework' %}">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/homework.jpg' %}" alt="Notes image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              Uy vazifalar
+            </h5>
+            Uy vazifalarini kiriting va ularga muddatlarni belgilang. Ular belgilangan muddatlarga ko'ra ko'rsatiladi
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-3">
+      <a href="{% url 'youtube' %}">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/youtube.jpg' %}" alt="Notes image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              Youtube
+            </h5>
+            Youtubedan qidiring va youtubedan ko'rish uchun kerakli videoni tanlang
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-3">
+      <a href="{% url 'todo' %}">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/todo.jpg' %}" alt="Notes image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              Ishlar ro'yhati
+            </h5>
+            Kun davomida qilinadigan ishlar roʻyxatini qoʻshing va tugashingiz bilan ularni olib tashlang
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <br><br><br>
+  <div class="row">
+    <div class="col-md-3 ">
+      <a href="{% url 'books' %}">
+        <div class="card mt-20">
+          <img class="card-img-top" src="{% static 'images/books.jpg' %}" alt="Notes image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              Kitoblar
+            </h5>
+            Kitob menyusidan kitoblarni qidirish
+          </div>
+        </div>
+      </a>
+    </div>
+
+
+
+    <div class="col-md-3">
+      <a href="{% url 'dictionary' %}">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/dictionary.jpg' %}" alt="Notes image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              Lug'at
+            </h5>
+            Kitobdagi notanish so'zlar sizni bezovta qilyaptimi? Muammo yo'q, so'zni kiriting va ma'no ko'rsatiladi,
+            deyarli bir zumda.
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-3">
+      <a href="{% url 'wiki' %}">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/wiki.jpg' %}" alt="Notes image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              WikiPedia
+            </h5>
+            Uy vazifasi va topshiriqlar? Tez natijalarga erishish uchun vikipediyadan qidiring
+          </div>
+        </div>
+      </a>
+    </div>
+
+
+    <div class="col-md-3">
+      <a href="{% url 'conversion' %}">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/conversion.jpg' %}" alt="Notes image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              Konvertatsiya
+            </h5>
+            O'lchovlarni o'zingiz tanlagan ko'proq tanish bo'lganlarga aylantirishga yordam beradigan konvertatsiya jadvalini ko'rib chiqing.
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+
+</section>
+{% endblock content %}

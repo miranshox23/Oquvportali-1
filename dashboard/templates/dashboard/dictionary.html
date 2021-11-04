@@ -1,0 +1,41 @@
+{% extends 'dashboard/base.html' %} 
+{% load static %} 
+{% load crispy_forms_tags %}
+{% block content %}
+<section class='text-center container'>
+    <h2>Google tarjima</h2>
+    <p>So'zning fonetikasini, ta'rifini va misolini olish uchun istalgan so'zni kiriting</p>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form|crispy}}
+        <input class="btn btn-danger" type="submit" value="Submit">
+    </form><br>
+    <div class="content-section p-0 mt-5">
+        {% if input %}
+        <div class="custom-header">
+            <h2>{{input}}</h2>
+            <h6>{{phonetics}}</h6>
+            <audio id="player" src="{{audio}}"></audio>
+            <div>
+                <a onclick="document.getElementById('player').play()"><i class='fa fa-volume-up fa-2x'></i></a>
+            </div>
+        </div>
+
+        <hr class="p-0 m-0">
+
+        <p class="float-left">
+            <h4>Ta'rifi: {{definition}}</h4>
+            <h4>Misol: {{example}}</h4>
+        </p>
+        Sinonimlar:
+        {% for synonym in synonyms %}
+            {{synonym}}
+        {% endfor %}
+        <hr>
+
+    </div>
+    {% else %}
+    <h2>Kechirasiz, API so‘rovi chegarasidan oshib ketdi, qayta urinib koʻring</h2>
+    {% endif %}
+</section>
+{% endblock content %}
